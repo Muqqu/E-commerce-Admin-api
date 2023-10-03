@@ -1,0 +1,47 @@
+Certainly, here's a documentation outline based on the tables you've provided:
+
+## Database Documentation
+
+### Table: Products
+
+#### Purpose:
+The "Products" table stores information about the products available in our e-commerce system.
+
+#### Columns:
+- `id`: An auto-incremented unique identifier for each product.
+- `name`: The name of the product.
+- `description`: A brief description of the product.
+- `price`: The price of the product.
+- `category`: The category to which the product belongs.
+
+### Table: Sales
+
+#### Purpose:
+The "Sales" table records information about each sale made in our e-commerce system.
+
+#### Columns:
+- `id`: An auto-incremented unique identifier for each sale.
+- `product_id`: A foreign key referencing the "Products" table, indicating the product sold.
+- `sale_date`: The date when the sale was made.
+- `quantity`: The quantity of the product sold.
+- `created_at`: The date and time when the sale record was created.
+
+### Table: Inventory Updates
+
+#### Purpose:
+The "Inventory Updates" table tracks changes in the inventory levels of each product.
+
+#### Columns:
+- `id`: An auto-incremented unique identifier for each inventory update.
+- `product_id`: A foreign key referencing the "Products" table, indicating the product for which inventory is updated.
+- `quantity`: The quantity change in the inventory (positive for additions, negative for deductions).
+
+### Relationships:
+
+- The "Products" table is related to the "Sales" table through the `product_id` foreign key in the "Sales" table. This relationship indicates which product was sold in each sale.
+
+- The "Products" table is also related to the "Inventory Updates" table through the `product_id` foreign key in the "Inventory Updates" table. This relationship indicates which product's inventory is being updated.
+
+- The "Sales" table and "Inventory Updates" table both have relationships with the "Products" table, allowing for easy access to product details when needed.
+
+This documentation provides an overview of the database schema, explaining the purpose of each table and its columns, as well as the relationships between the tables. It serves as a reference for developers and team members working on the project and helps maintain consistency and understanding of the database structure.

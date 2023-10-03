@@ -36,9 +36,9 @@ To run this project locally, follow these steps:
 5. Access the API at http://localhost:8000 in your web browser or API client.
 
 
-
+## Database Documentation
 **Database Schema**
-For information about the database schema and relationships, see Database Schema.
+For information about the database schema and relationships, see DatabaseSchema.txt
 
 
 
