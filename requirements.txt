@@ -1,0 +1,5 @@
+fastapi
+Faker
+mysql-connector-python
+uvicorn
+SQLAlchemy

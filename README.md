@@ -24,19 +24,19 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/Muqqu/E-commerce-Admin-api.git
 
-2. Set up your database and configure the database connection in config.py.
-3.  Run the FastAPI application:
+2. Install the required dependencies:
+   ```pip install -r requirements.txt
+
+
+3. Set up your database and configure the database connection in config.py.
+4.  Run the FastAPI application:
    uvicorn main:app --reload
 
-4. Access the API at http://localhost:8000 in your web browser or API client.
+5. Access the API at http://localhost:8000 in your web browser or API client.
 
-**API Endpoints**
-Sales Status: /sales/
-Revenue Analysis: /revenue/
-Inventory Management: /inventory/
-Product Registration: /products/
 
-Database Schema
+
+**Database Schema**
 For information about the database schema and relationships, see Database Schema.
 
 
