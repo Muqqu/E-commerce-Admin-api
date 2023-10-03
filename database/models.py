@@ -1,20 +1,30 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime
 from sqlalchemy.sql import func
-from database import Base
+from pydantic import BaseModel
+from datetime import date, time, timedelta
+from pydantic.fields import Field
 
-class Product(Base):
+
+class Product(BaseModel):
     __tablename__ = "products"
+
+    name : str
+    description : str
+    price :float
+    category : str
     
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    description = Column(String)
-    price = Column(Float)
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
     
-class Sale(Base):
+class Sale(BaseModel):
     __tablename__ = "sales"
+ 
+    product_id : int
+    sale_date : date
+    quantity : int
+    created_at: date
+
+class InventoryUpdate(BaseModel):
+    __tablename__ = "inventory"
+    product_id: int
+    quantity: int
     
-    id = Column(Integer, primary_key=True, index=True)
-    product_id = Column(Integer, index=True)
-    sale_date = Column(DateTime(timezone=True), server_default=func.now())
-    quantity = Column(Integer)
+
