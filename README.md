@@ -25,7 +25,8 @@ To run this project locally, follow these steps:
    git clone https://github.com/Muqqu/E-commerce-Admin-api.git
 
 2. Install the required dependencies:
-   ```pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 
 3. Set up your database and configure the database connection in config.py.
